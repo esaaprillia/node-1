@@ -6,6 +6,7 @@
 #define V8_CODEGEN_TNODE_H_
 
 #include "src/codegen/machine-type.h"
+#include "src/objects/cell.h"
 
 namespace v8 {
 namespace internal {
