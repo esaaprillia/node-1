@@ -12,6 +12,7 @@ command -v python3.7 >/dev/null && exec python3.7 "$0" "$@"
 command -v python3.6 >/dev/null && exec python3.6 "$0" "$@"
 command -v python3.5 >/dev/null && exec python3.5 "$0" "$@"
 command -v python3 >/dev/null && exec python3 "$0" "$@"
+command -v python3.14 >/dev/null && exec python3.14 "$0" "$@"
 command -v python2.7 >/dev/null && exec python2.7 "$0" "$@"
 exec python "$0" "$@"
 ''' "$0" "$@"
@@ -25,7 +26,7 @@ except ImportError:
   from distutils.spawn import find_executable as which
 
 print('Node.js configure: Found Python {0}.{1}.{2}...'.format(*sys.version_info))
-acceptable_pythons = ((3,10), (3, 9), (3, 8), (3, 7), (3, 6), (3, 5), (2, 7))
+acceptable_pythons = ((3.14), (3,10), (3, 9), (3, 8), (3, 7), (3, 6), (3, 5), (2, 7))
 if sys.version_info[:2] in acceptable_pythons:
   import configure
 else:
